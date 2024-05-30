@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Gestor de Autos</h1>
-    <button onclick="location.href='agregarAu.php'">Agregar Auto</button>
-    <button onclick="location.href='listadoAu.php'">Ver Listado de autos</button>
+    <button onclick="location.href='autos/agregarAu.php'">Agregar Auto</button>
+    <button onclick="location.href='autos/listadoAu.php'">Ver Listado de autos</button>
     <button onclick="location.href='gestor.php'">Volver al Inicio</button>
 </body>
 </html>
