@@ -15,12 +15,14 @@
                 <th>Color</th>
                 <th>Precio de Venta</th>
                 <th>Cliente</th>
+                <th>Operacion</th>
+                <th>Operacion</th>
             </tr>
         </thead>
         <tbody>
             <?php
             include 'conexion.php';
-            $sql = "SELECT a.marca, a.modelo, a.color, a.pventa, c.nomyape 
+            $sql = "SELECT * 
                     FROM auto a 
                     INNER JOIN cliente c ON a.cod_cliente = c.cod_cliente";
             $result = $conn->query($sql);
@@ -32,6 +34,8 @@
                     echo "<td>" . $row['color'] . "</td>";
                     echo "<td>" . $row['pventa'] . "</td>";
                     echo "<td>" . $row['nomyape'] . "</td>";
+                    echo "<td><a href='modificarAu.php?id=" . $row["cod_auto"] . "'>Modificar</a></td>";
+                    echo "<td><a href='eliminar.php?id=" . $row["cod_auto"] . "' onclick='return confirmarEliminar();'>Eliminar</a></td>";
                     echo "</tr>";
                 }
             } else {
