@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Gestor de Cliente</h1>
-    <button onclick="location.href='agregarCliente.php'">Agregar Cliente</button>
-    <button onclick="location.href='listadoClientes.php'">Ver Listado de Clientes</button>
+    <button onclick="location.href='cliente/agregarCliente.php'">Agregar Cliente</button>
+    <button onclick="location.href='cliente/listadoCliente.php'">Ver Listado de Clientes</button>
     <button onclick="location.href='gestor.php'">Volver al Inicio</button>
 </body>
 </html>
