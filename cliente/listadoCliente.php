@@ -34,8 +34,10 @@
             echo "<td>" . $row["direccion"] . "</td>";
             echo "<td>" . $row["ciudad"] . "</td>";
             echo "<td>" . $row["telefono"] . "</td>";
-            echo "<td>" . $row["f_alta"] . "</td>";
-            // Agregar enlaces para modificar y eliminar
+           // Convertir la fecha a dd/mm/yyyy
+            $fecha_alta = date("d/m/Y", strtotime($row["f_alta"]));
+            echo "<td>" . $fecha_alta . "</td>";
+            // Agregar enlaces para modificar y e   liminar
             echo "<td><a href='modificarCliente.php?id=" . $row["cod_cliente"] . "'>Modificar</a></td>";
             echo "<td><a href='eliminarCliente.php?id=" . $row["cod_cliente"] . "' onclick='return confirmarEliminar();'>Eliminar</a></td>";
             echo "</tr>";

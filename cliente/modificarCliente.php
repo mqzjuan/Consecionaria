@@ -51,8 +51,12 @@ if(isset($_GET["id"]) && !empty($_GET["id"])) {
         <label for="direccion">Dirección:</label><br>
         <input type="text" id="direccion" name="direccion" value="<?php echo $direccion; ?>" required><br>
         
-        <label for="ciudad">Ciudad:</label><br>
-        <input type="text" id="ciudad" name="ciudad" value="<?php echo $ciudad; ?>" required><br>
+        <label for="direccion">Ciudad:</label><br>
+        <select id="ciudad" name="ciudad" required>
+            <option value="Rio Grande" <?php if ($cliente['ciudad'] == 'Rio Grande') echo 'selected'; ?>>Rio Grande</option>
+            <option value="Ushuaia" <?php if ($cliente['ciudad'] == 'Ushuaia') echo 'selected'; ?>>Ushuaia</option>
+            <option value="Tolhuin" <?php if ($cliente['ciudad'] == 'Tolhuin') echo 'selected'; ?>>Tolhuin</option>
+        </select><br>
         
         <label for="telefono">Teléfono:</label><br>
         <input type="tel" id="telefono" name="telefono" value="<?php echo $telefono; ?>" required><br>

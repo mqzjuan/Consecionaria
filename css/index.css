@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: url('../img/Inicio.jpg') no-repeat center center; 
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-attachment: fixed; /* Hace que la imagen permanezca fija en la ventana de visualización */
     display: flex;
     justify-content: center;
     align-items: center;
